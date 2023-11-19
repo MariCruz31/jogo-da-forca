@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family= Manrope :wght@400;600;700;800 & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-background: #4d9458f5;
+    --cor-secundaria: rgb(8, 85, 18)9d;
+    --cor-terciaria: rgb(26, 75, 56);
+    --cor-quartenaria: #d9e7e0;
+
+    --font-principal:'Manrope', sans-serif;
+}
+
+.body{
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10px;
+    background-color: var(--cor-background);
+    font-family: var(--font-principal);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container__imagem{
+    background-image: url(./images/hangman-0.svg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 272px;
+}
+
+.container__palavra-secreta{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 3vh;
+}
+
+.letras{
+    width: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--cor-secundaria);
+    color: var(--cor-quartenaria);
+    margin: 0 2px 5px 2px;
+}
+
+.container__teclado{
+    margin-top: 2rem;
+}
+
+.teclas button{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 2px 2px 5px 2px;
+    cursor: pointer;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.teclas button:hover{
+    transform:scale(1.2);
+}
+
+.teclas button:disabled{
+    cursor: not-allowed;
+}
+
+.container__categoria{
+    margin-top: 2rem;
+    color: var(--cor-quartenaria);
+    font-size: 1.2rem;
+}
+
+
+/*Media querys*/
+
+@media (min-width: 376px){
+
+    .letras{
+        width: 1.5rem;
+    }
+
+    .teclas button{
+        width: 1.8rem;
+        height: 1.8rem;
+    } 
+
+    .container__categoria{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 426px){
+
+    .letras{
+        width: 1.7rem;
+    }
+
+    .teclas button{
+        width: 2.0rem;
+        height: 2.0rem;
+    } 
+
+    .container__categoria{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px){
+
+    .letras{
+        width: 3.0rem;
+    }
+
+    .teclas button{
+        width: 3.0rem;
+        height: 3.0rem;
+    } 
+
+    .container__categoria{
+        font-size: 1.8rem;
+    }
+}
